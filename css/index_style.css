@@ -1,0 +1,161 @@
+/* Custom Stylesheet */
+/**
+ * Use this file to override Materialize files so you can update
+ * the core Materialize files in the future
+ *
+ * Made By MaterializeCSS.com
+ */
+
+nav ul a,
+nav .brand-logo {
+  color: #444;
+}
+.navbar-fixed .nav-wrapper {
+  transition-duration: 0.5s;
+}
+id.input-field input:focus + label {
+  color: #ffffff !important;
+}
+#search{
+  border-bottom: 1px solid #ffffff !important;
+}
+
+.margin-top {
+  margin-top: 100px;
+}
+html {
+  font-family: Gafata, sans-serif;
+  font-size: medium;
+}
+
+.indent{ padding-left: 1.8em }
+
+i.icon-blue {
+  color: #0d47a1;
+}
+
+i.icon-white {
+  color: #FFFFFF;
+}
+
+i.icon-orange {
+  color: #ef6c00;
+}
+
+/* label focus color */
+.input-field input:focus + label {
+  color: #0d47a1 !important;
+}
+/* label underline focus color */
+.row .input-field input:focus {
+  border-bottom: 1px solid #0d47a1 !important;
+  box-shadow: 0 1px 0 0 #0d47a1 !important
+}
+
+.padding-divider {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+#global-search {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+
+p1 {
+  line-height: 2rem;
+
+}
+
+.button-collapse {
+  color: #FFC107;
+}
+
+.button-color {
+  border-radius: 15px;
+  background-color: #2E3192;
+  line-height: 25px;
+}
+
+.button-r_edge {
+  border-radius: 15px;
+}
+
+.card-r_edge {
+  border-radius: 10px;
+}
+.btn {
+  color: #FFC107;
+}
+
+.login-modal {
+  max-width: 400px;
+  border-radius: 10px;
+}
+
+
+.parallax-container {
+  min-height: 680px;
+  line-height: 0;
+  height: auto;
+  color: rgba(255,255,255,.9);
+}
+  .parallax-container .section {
+    width: 100%;
+  }
+
+@media only screen and (max-width : 992px) {
+  .parallax-container .section {
+    position: absolute;
+    top: 40%;
+  }
+  #index-banner .section {
+    top: 10%;
+  }
+}
+
+@media only screen and (max-width : 600px) {
+  #index-banner .section {
+    top: 0;
+  }
+}
+
+.icon-block {
+  padding: 0 15px;
+}
+.icon-block .material-icons {
+  font-size: inherit;
+}
+
+footer.page-footer {
+  margin: 0;
+}
+/* label color */
+.input-field label {
+  color: #000;
+}
+/* label focus color */
+.input-field input[type=text]:focus + label {
+  color: #000;
+}
+/* label underline focus color */
+.input-field input[type=text]:focus {
+  border-bottom: 1px solid #000;
+  box-shadow: 0 1px 0 0 #000;
+}
+/* valid color */
+.input-field input[type=text].valid {
+  border-bottom: 1px solid #000;
+  box-shadow: 0 1px 0 0 #000;
+}
+/* invalid color */
+.input-field input[type=text].invalid {
+  border-bottom: 1px solid #000;
+  box-shadow: 0 1px 0 0 #000;
+}
+/* icon prefix focus color */
+.input-field .prefix.active {
+  color: #000;
+}

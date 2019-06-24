@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+    <title>Vehicle Settings</title>
+    <link rel="icon" href="images/logo.png">
+
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
+    <link href="css/vehicle_settings_style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Gafata" rel="stylesheet">
+</head>
+<body class="orange lighten-5">
+<nav class="orange darken-3 nav-extended">
+    <div class="container nav-wrapper">
+        <div class="col s12">
+            <a href="#!" class="breadcrumb">Home</a>
+            <a href="#!" class="breadcrumb">Admin</a>
+            <a href="#!" class="breadcrumb">Vehicle Settings</a>
+        </div>
+    </div>
+    <div class="container nav-content">
+        <ul class="tabs tabs-transparent tabs-fixed-width">
+            <li class="tab"><a class="active" href="#make">Make</a></li>
+            <li class="tab"><a href="#model">Model</a></li>
+            <li class="tab"><a href="#year">Year</a></li>
+            <li class="tab"><a href="#type">Type</a></li>
+            <li class="tab"><a href="#config">Config</a></li>
+            <li class="tab"><a href="#capacity">Capacity</a></li>
+        </ul>
+    </div>
+</nav>
+
+<div id="make">
+    <div class="row">
+        <h3 class="center-align"><i class="large material-icons icon-blue">directions_car</i></h3>
+        <h3 class="header center-align blue-text text-darken-4">Vehicle Make</h3>
+    </div>
+    <div class="row">
+        <div class="col s10 offset-s1 m10 offset-m1 l4 offset-l2">
+            <div class="row">
+                <div class="card horizontal hoverable col s12 m12 l12">
+                    <div class="card-stacked">
+                        <div class="card-content col s12 m10 offset-m1 l10 offset-l1">
+                            <div class="row">
+                                <div class="input-field right">
+                                    <select>
+                                        <option value="" disabled selected>Choose your option</option>
+                                        <option value="1">English</option>
+                                        <option value="2">Arabic</option>
+                                        <option value="3">Malayalam</option>
+                                        <option value="4">Hindi</option>
+                                    </select>
+                                    <label>Language Select</label>
+                                </div>
+                            </div>
+                            <form action="#">
+                                <div class="row">
+                                    <div class="input-field left col s11 m10 l10">
+                                        <i class="material-icons prefix">local_shipping</i>
+                                        <input id="email" type="text" class="validate  brown-text">
+                                        <label for="email">Make Name</label>
+                                    </div>
+                                    <a class="btn-flat tooltipped right col s1 m1 l1" data-position="bottom" data-delay="50" data-tooltip="I am tooltip3"><i class="material-icons icon-grey">info</i></a>
+                                </div>
+                                <div class="file-field input-field">
+                                    <a class="btn-flat tooltipped right col s1 m1 l1" data-position="bottom" data-delay="50" data-tooltip="I am tooltip3"><i class="material-icons icon-grey">info</i></a>
+                                    <div class="waves-effect waves-light btn blue darken-4">
+                                        <span>Logo</span>
+                                        <input type="file">
+                                    </div>
+                                    <div class="file-path-wrapper">
+                                        <input class="file-path validate" type="text" placeholder="Upload Logo Here">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="input-field col s11 m10 l10">
+                                        <i class="material-icons prefix">map</i>
+                                        <input type="text" id="autocomplete-input" class="autocomplete">
+                                        <label for="autocomplete-input">Country</label>
+                                    </div>
+                                    <a class="btn-flat tooltipped right col s1 m1 l1" data-position="bottom" data-delay="50" data-tooltip="I am tooltip3"><i class="material-icons icon-grey">info</i></a>
+                                </div>
+                                <div class="card-action">
+                                    <button class="waves-effect waves-light waves-orange btn-flat blue-text text-darken-4 right" type="submit" name="action">Insert
+                                        <i class="material-icons left">send</i>
+                                    </button>
+                                    <button class="waves-effect waves-light waves-orange btn-flat blue-text text-darken-4 right" type="submit" name="action">Update
+                                        <i class="material-icons left">update</i>
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col s10 offset-s1 m10 offset-m1 l4">
+            <div class="row">
+                <div class="card hoverable col s12 m12 l12">
+                    <table class="highlight responsive-table ">
+                        <thead><tr>
+                            <th data-field="img" class="blue-text text-darken-4">Logo</th>
+                            <th data-field="name" class="blue-text text-darken-4">Make Name</th>
+                            <th data-field="country" class="blue-text text-darken-4">Make Country</th>
+                        </tr></thead>
+
+                        <tbody id="make-table">
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div id="model">
+    <div class="row">
+        <h3 class="center-align"><i class="large material-icons icon-blue">directions_car</i></h3>
+        <h3 class="header center-align blue-text text-darken-4">Vehicle Model</h3>
+    </div>
+    <div class="row">
+        <div class="col s10 offset-s1 m10 offset-m1 l4 offset-l2">
+            <div class="row">
+                <div class="card horizontal hoverable col s12 m12 l12">
+                    <div class="card-stacked">
+                        <div class="card-content col s12 m10 offset-m1 l10 offset-l1">
+                            <div class="row">
+                                <div class="input-field right">
+                                    <select>
+                                        <option value="" disabled selected>Choose your option</option>
+                                        <option value="1">English</option>
+                                        <option value="2">Arabic</option>
+                                        <option value="3">Malayalam</option>
+                                        <option value="4">Hindi</option>
+                                    </select>
+                                    <label>Language Select</label>
+                                </div>
+                            </div>
+                            <form action="#">
+                                    <div class="input-field">
+                                        <a class="btn-flat tooltipped right col s1 m1 l1" data-position="bottom" data-delay="50" data-tooltip="I am tooltip3"><i class="material-icons icon-grey">info</i></a>
+                                        <input id="model_name" type="text" class="validate">
+                                        <label for="model_name">Model Name</label>
+                                    </div>
+                                <div class="file-field input-field">
+                                    <a class="btn-flat tooltipped right col s1 m1 l1" data-position="bottom" data-delay="50" data-tooltip="I am tooltip3"><i class="material-icons icon-grey">info</i></a>
+                                    <div class="waves-effect waves-light btn blue darken-4">
+                                        <span>Logo</span>
+                                        <input type="file">
+                                    </div>
+                                    <div class="file-path-wrapper">
+                                        <input class="file-path validate" type="text" placeholder="Upload Logo here">
+                                    </div>
+                                </div>
+                                <div class="input-field">
+                                    <a class="btn-flat tooltipped right col s1 m1 l1" data-position="bottom" data-delay="50" data-tooltip="I am tooltip3"><i class="material-icons icon-grey">info</i></a>
+                                    <input id="parent_make" type="text" class="validate">
+                                    <label for="parent_make">Parent Make</label>
+                                </div>
+                                <div class="card-action">
+                                    <button class="waves-effect waves-light waves-orange btn-flat blue-text text-darken-4 right" type="submit" name="action">Insert
+                                        <i class="material-icons left">send</i>
+                                    </button>
+                                    <button class="waves-effect waves-light waves-orange btn-flat blue-text text-darken-4 right" type="submit" name="action">Update
+                                        <i class="material-icons left">update</i>
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col s10 offset-s1 m10 offset-m1 l4">
+            <div class="row">
+                <div class="card hoverable col s12 m12 l12">
+                    <table class="highlight responsive-table">
+                        <thead><tr>
+                            <th data-field="img" class="blue-text text-darken-4">Logo</th>
+                            <th data-field="name" class="blue-text text-darken-4">Name</th>
+                            <th data-field="parent" class="blue-text text-darken-4">Parent Make</th>
+                        </tr></thead>
+                        <tbody id="model-table">
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="year">
+    <div class="row">
+        <h3 class="center-align"><i class="large material-icons icon-blue">directions_car</i></h3>
+        <h3 class="header center-align blue-text text-darken-4">Vehicle Year</h3>
+    </div>
+    <div class="row">
+        <div class="col s10 offset-s1 m10 offset-m1 l4 offset-l2">
+            <div class="row">
+                <div class="card horizontal hoverable col s12 m12 l12">
+                    <div class="card-stacked">
+                        <div class="card-content col s12 m10 offset-m1 l10 offset-l1">
+                            <form action="#">
+                                <div class="input-field">
+                                    <input id="year" type="text" class="validate">
+                                    <label for="year">Vehicle Year</label>
+                                </div>
+                                <div class="file-field input-field">
+                                    <div class="waves-effect waves-light btn blue darken-4">
+                                        <span>Logo</span>
+                                        <input type="file">
+                                    </div>
+                                    <div class="file-path-wrapper">
+                                        <input class="file-path validate" type="text" placeholder="Upload Logo here">
+                                    </div>
+                                </div>
+                                <div class="card-action">
+                                    <button class="waves-effect waves-light waves-orange btn-flat blue-text text-darken-4 right" type="submit" name="action">Insert
+                                        <i class="material-icons left">send</i>
+                                    </button>
+                                    <button class="waves-effect waves-light waves-orange btn-flat blue-text text-darken-4 right" type="submit" name="action">Update
+                                        <i class="material-icons left">update</i>
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col s10 offset-s1 m10 offset-m1 l4">
+            <div class="row">
+                <div class="card hoverable col s12 m12 l8 offset-l2">
+                    <table class="highlight responsive-table">
+                        <thead><tr>
+                            <th data-field="img" class="blue-text text-darken-4">Logo</th>
+                            <th data-field="year" class="blue-text text-darken-4">Year</th>
+                        </tr></thead>
+                        <tbody id="year-table">
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="type">
+    <div class="row">
+        <h3 class="center-align"><i class="large material-icons icon-blue">directions_car</i></h3>
+        <h3 class="header center-align blue-text text-darken-4">Vehicle Type</h3>
+    </div>
+    <div class="row">
+        <div class="col s10 offset-s1 m10 offset-m1 l4 offset-l2">
+            <div class="row">
+                <div class="card horizontal hoverable col s12 m12 l12">
+                    <div class="card-stacked">
+                        <div class="card-content col s12 m10 offset-m1 l10 offset-l1">
+                            <form action="#">
+                                <div class="input-field">
+                                    <input id="type-name" type="text" class="validate">
+                                    <label for="type-name">Type Name</label>
+                                </div>
+                                <div class="input-field">
+                                    <textarea id="type-description" class="materialize-textarea"></textarea>
+                                    <label for="type-description">Description</label>
+                                </div>
+                                <div class="file-field input-field" id="#type_img">
+                                    <div class="waves-effect waves-light btn blue darken-4">
+                                        <span>Image</span>
+                                        <input type="file">
+                                    </div>
+                                    <div class="file-path-wrapper">
+                                        <input class="file-path validate" id="type-image" type="text" placeholder="Upload an Image">
+                                    </div>
+                                </div>
+                                <div class="section">
+                                    <p>
+                                        <input type="checkbox" class="filled-in" id="type-isEquipment" checked="checked" />
+                                        <label for="type-isEquipment">Is Equipment Type</label>
+                                    </p>
+                                </div>
+                                <div class="card-action">
+                                    <a class="waves-effect waves-light waves-orange btn-flat blue-text text-darken-4 right" id="insert-type">Insert
+                                        <i class="material-icons left">send</i>
+                                    </a>
+                                    <button class="waves-effect waves-light waves-orange btn-flat blue-text text-darken-4 right" type="submit" name="update-type">Update
+                                        <i class="material-icons left">update</i>
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col s10 offset-s1 m10 offset-m1 l4">
+            <div class="row">
+                <div class="card hoverable card hoverable col s12 m12 l12">
+                    <table class="highlight responsive-table">
+                        <thead><tr>
+                            <th data-field="img" class="blue-text text-darken-4">Image</th>
+                            <th data-field="name" class="blue-text text-darken-4">Type Name</th>
+                            <th data-field="description" class="blue-text text-darken-4">Type Description</th>
+                            <th data-field="is-equipment" class="blue-text text-darken-4">Is Equipment</th>
+                        </tr></thead>
+
+                        <tbody id="type-table">
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="config">
+    <div class="row">
+        <h3 class="center-align"><i class="large material-icons icon-blue">directions_car</i></h3>
+        <h3 class="header center-align blue-text text-darken-4">Vehicle Configuration</h3>
+    </div>
+    <div class="row">
+        <div class="col s10 offset-s1 m10 offset-m1 l4 offset-l2">
+            <div class="row">
+                <div class="card horizontal hoverable col s12 m12 l12">
+                    <div class="card-stacked">
+                        <div class="card-content col s12 m10 offset-m1 l10 offset-l1">
+                            <form action="#">
+                                <div class="input-field">
+                                    <input id="config-name" type="text" class="validate">
+                                    <label for="config-name">Config Name</label>
+                                </div>
+                                <div class="input-field">
+                                    <textarea id="config-description" class="materialize-textarea"></textarea>
+                                    <label for="config-description">Description</label>
+                                </div>
+                                <div class="file-field input-field" id="#config_img">
+                                    <div class="waves-effect waves-light btn blue darken-4">
+                                        <span>Image</span>
+                                        <input type="file">
+                                    </div>
+                                    <div class="file-path-wrapper">
+                                        <input class="file-path validate" type="text" placeholder="Upload an Image">
+                                    </div>
+                                </div>
+                                <div class="card-action">
+                                    <button class="waves-effect waves-light waves-orange btn-flat blue-text text-darken-4 right" type="submit" name="action">Insert
+                                        <i class="material-icons left">send</i>
+                                    </button>
+                                    <button class="waves-effect waves-light waves-orange btn-flat blue-text text-darken-4 right" type="submit" name="action">Update
+                                        <i class="material-icons left">update</i>
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col s10 offset-s1 m10 offset-m1 l4">
+            <div class="row">
+                <div class="card hoverable col s12 m12 18 offset-l2">
+                    <table class="highlight responsive-table">
+                        <thead><tr>
+                            <th data-field="img" class="blue-text text-darken-4">Image</th>
+                            <th data-field="name" class="blue-text text-darken-4">Name</th>
+                            <th data-field="description" class="blue-text text-darken-4">Description</th>
+                        </tr></thead>
+
+                        <tbody id="config-table">
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="capacity">
+    <div class="row">
+        <h3 class="center-align"><i class="large material-icons icon-blue">directions_car</i></h3>
+        <h3 class="header center-align blue-text text-darken-4">Vehicle Capacity</h3>
+    </div>
+    <div class="row">
+        <div class="col s10 offset-s1 m10 offset-m1 l4 offset-l2">
+            <div class="row">
+                <div class="card horizontal hoverable col s12 m12 l12">
+                    <div class="card-stacked">
+                        <div class="card-content col s12 m10 offset-m1 l10 offset-l1">
+                            <form action="#">
+                                <div class="input-field">
+                                    <input id="capacity-name" type="text" class="validate">
+                                    <label for="capacity-name">Name</label>
+                                </div>
+                                <div class="input-field">
+                                    <input id="capacity-no" type="number" class="validate">
+                                    <label for="capacity-no">Capacity</label>
+                                </div>
+                                <div class="input-field">
+                                    <input id="capacity-length" type="number" step="0.001" class="validate">
+                                    <label for="capacity-length">Length</label>
+                                </div>
+                                <div class="input-field">
+                                    <input id="pallet" type="number" class="validate">
+                                    <label for="pallet">Pallet Number</label>
+                                </div>
+                                <div class="card-action">
+                                    <button class="waves-effect waves-light waves-orange btn-flat blue-text text-darken-4 right" type="submit" name="action">Insert
+                                        <i class="material-icons left">send</i>
+                                    </button>
+                                    <button class="waves-effect waves-light waves-orange btn-flat blue-text text-darken-4 right" type="submit" name="action">Update
+                                        <i class="material-icons left">update</i>
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+            <div class="col s10 offset-s1 m10 offset-m1 l4">
+                <div class="row">
+                    <div class="card hoverable col s12 m12 l12">
+                        <table class="highlight responsive-table">
+                            <thead><tr>
+                                <th data-field="name" class="blue-text text-darken-4">Name</th>
+                                <th data-field="capacity" class="blue-text text-darken-4">Capactity</th>
+                                <th data-field="length" class="blue-text text-darken-4">Length</th>
+                                <th data-field="pallet" class="blue-text text-darken-4">Pallet No</th>
+                            </tr></thead>
+
+                            <tbody id="capacity-table">
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+    </div>
+</div>
+
+
+<!--  Scripts-->
+<script src="scripts/angular.min.js"></script>
+<script src="scripts/jquery-3.1.1.min.js"></script>
+<script src="scripts/materialize.min.js"></script>
+<script src="https://apis.google.com/js/client.js?onload=init"></script>
+<script src="scripts/init.js"></script>
+
+<!-- Firebase JS -->
+<script src="https://www.gstatic.com/firebasejs/3.7.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/3.7.0/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/3.7.0/firebase-database.js"></script>
+<script src="https://www.gstatic.com/firebasejs/3.7.0/firebase-messaging.js"></script>
+<script src="scripts/firebase_init.js"></script>
+<script src="scripts/firebase_email_login.js"></script>
+<script src="scripts/vehicle_api_task.js"></script>
+<script src="https://apis.google.com/js/client.js?onload=init"></script>
+
+</body>
+</html>

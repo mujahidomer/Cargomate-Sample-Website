@@ -1,0 +1,19 @@
+.navbar-fixed {
+
+    top: 0;
+    background: transparent;
+    width: 100%;
+    transition-duration: 1s;
+
+    position: fixed;
+    height: 64px;
+    z-index: 997;
+}
+
+.navMain ul li {
+    display: inline-block;
+}
+
+p {
+    margin-top: 150px;
+}
